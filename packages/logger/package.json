@@ -1,0 +1,22 @@
+{
+  "name": "@d2ts/logger",
+  "version": "0.0.1",
+  "description": "TypeScript library for D2BS (@logger)",
+  "license": "ISC",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "scripts": {
+    "build": "npm run clean && npm run compile",
+    "compile": "rollup -c ../../rollup.config.js",
+    "clean": "rm -rf ./dist"
+  },
+  "files": [
+    "dist"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "devDependencies": {
+    "@d2ts/types": "^0.0.1"
+  }
+}

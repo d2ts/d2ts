@@ -1,0 +1,11 @@
+{
+  "extends": "../tsconfig.base.json",
+  "compilerOptions": {
+    "rootDir": "./src",
+    "outDir": "./lib",
+    "lib": ["es5"],
+    "typeRoots": ["./node_modules/@d2ts/types"]
+  },
+  "include": ["src"],
+  "exclude": ["node_modules", "lib"]
+}

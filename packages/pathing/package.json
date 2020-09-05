@@ -1,0 +1,20 @@
+{
+  "name": "@d2ts/pathing",
+  "version": "0.0.1",
+  "description": "TypeScript library for D2BS (@pathing)",
+  "license": "ISC",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "scripts": {
+    "build": "npm run clean && npm run compile",
+    "compile": "rollup -c ../../rollup.config.js",
+    "clean": "rm -rf ./dist"
+  },
+  "dependencies": {
+    "@d2ts/unit": "^0.0.1"
+  },
+  "devDependencies": {
+    "@d2ts/types": "^0.0.1",
+    "typescript": "^3.9.2"
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "name": "@d2ts/core",
+  "version": "0.0.1",
+  "description": "TypeScript library for D2BS (@core)",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "license": "ISC",
+  "scripts": {
+    "build": "npm run clean && npm run compile",
+    "compile": "rollup -c ../../rollup.config.js",
+    "clean": "rm -rf ./dist"
+  },
+  "devDependencies": {
+    "@d2ts/types": "^0.0.1",
+    "typescript": "^3.9.2"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "compilerOptions": {
+    "target": "es5",
+    "moduleResolution": "node",
+    "declaration": true,
+    "esModuleInterop": true,
+    "allowJs": true,
+    "lib": [
+      "es2017"
+    ]
+  },
+  "exclude": ["./node_modules", "./dist", "./**/*.spec.ts"]
+}

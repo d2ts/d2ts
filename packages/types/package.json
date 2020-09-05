@@ -1,0 +1,8 @@
+{
+  "name": "@d2ts/types",
+  "version": "0.0.1",
+  "description": "TypeScript library for D2BS (@types)",
+  "homepage": "",
+  "license": "ISC",
+  "types": "./d2bs/index.d.ts"
+}

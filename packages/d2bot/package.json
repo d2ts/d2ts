@@ -1,0 +1,21 @@
+{
+  "name": "@d2ts/d2bot",
+  "version": "0.0.1",
+  "description": "TypeScript library for D2BS (@d2bot)",
+  "license": "ISC",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "build": "npm run clean && npm run compile",
+    "compile": "rollup -c ../../rollup.config.js",
+    "clean": "rm -rf ./dist"
+  },
+  "devDependencies": {
+    "@d2ts/core": "^0.0.1",
+    "@d2ts/types": "^0.0.1",
+    "typescript": "^3.9.2"
+  }
+}
