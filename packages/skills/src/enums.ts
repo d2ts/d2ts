@@ -1,4 +1,4 @@
-export enum UnitSkill {
+export enum Skill {
   attack = 0,
   kick = 1,
   throw = 2,

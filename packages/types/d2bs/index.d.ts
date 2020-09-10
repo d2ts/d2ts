@@ -244,6 +244,7 @@ declare function clickMap(
   y: number
 )
 declare function clickMap(buttonType: number, shift: boolean, unit: UnitType)
+declare function getBaseStat(txtFile: string, row: number, columnHeader: string)
 declare function getDistance(a: Point, b: Point): number
 declare function getArea(): Area
 declare function getArea(areaId: number): Area

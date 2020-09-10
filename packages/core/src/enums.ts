@@ -43,3 +43,18 @@ export enum KeyId {
   Enter = 13,
   Escape = 27,
 }
+
+/**
+ * Full list in d2bs source code. In file MPQStats.cpp, `BaseStatTable` variable.
+ */
+export enum MpqTable {
+  Items = 'items',
+  MonStats = 'monstats',
+  SkillDesc = 'skilldesc',
+  Skills = 'skills',
+  Objects = 'objects',
+  Missiles = 'missiles',
+  MonStats2 = 'monstats2',
+  ItemStatCost = 'itemstatcost',
+  Levels = 'levels',
+}

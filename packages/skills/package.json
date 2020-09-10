@@ -1,7 +1,7 @@
 {
-  "name": "@d2ts/pathing",
+  "name": "@d2ts/skills",
   "version": "0.0.1",
-  "description": "TypeScript library for D2BS (@pathing)",
+  "description": "TypeScript library for D2BS (@skills)",
   "license": "ISC",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
@@ -10,12 +10,11 @@
     "compile": "rollup -c ../../rollup.config.js",
     "clean": "rm -rf ./dist"
   },
-  "dependencies": {
-    "@d2ts/unit": "^0.0.1",
-    "@d2ts/skills": "^0.0.1"
-  },
   "devDependencies": {
     "@d2ts/types": "^0.0.1",
     "typescript": "^3.9.2"
+  },
+  "dependencies": {
+    "@d2ts/core": "^0.0.1"
   }
 }

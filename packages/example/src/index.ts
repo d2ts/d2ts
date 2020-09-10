@@ -37,19 +37,19 @@ let inGame = false
 
 const testNode = builder
   .selector()
-    .sequence()
-      .timeout(10000)
-        .condition(() => getUIFlag(0x14))
-      .end()
-      .condition(() => {
-        logger.debug('condition met')
-        return true
-      })
-    .end()
-    .condition(() => {
-      logger.debug('timeout reached')
-      return true
-    })
+  .sequence()
+  .timeout(10000)
+  .condition(() => getUIFlag(0x14))
+  .end()
+  .condition(() => {
+    logger.debug('condition met')
+    return true
+  })
+  .end()
+  .condition(() => {
+    logger.debug('timeout reached')
+    return true
+  })
   .end()
   .build()
 
@@ -90,6 +90,14 @@ addEventListener('keyup', (key) => {
   if (key === 96) {
     inGame = !inGame
   }
+  if (key === 97) {
+    for (let i = 0; i < 200; i += 1) {
+      const levelName = getBaseStat('levels', i, 'LevelName')
+      if (levelName) {
+        print(levelName)
+      }
+    }
+  }
 })
 
 showConsole()
@@ -97,7 +105,6 @@ logger.info('Running example..')
 d2bot.printToConsole('D2TS example is now running!', D2BotConsoleTextColor.Blue)
 
 const rootNode = b.outOfGame.rootOutOfGame()
-
 
 while (true) {
   rootNode.tick(blackboard)

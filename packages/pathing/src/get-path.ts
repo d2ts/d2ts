@@ -1,11 +1,12 @@
-import {isMorphed, UnitSkill, UnitStat} from '@d2ts/unit'
+import {isMorphed, UnitStat} from '@d2ts/unit'
+import {Skill} from '@d2ts/skills'
 import {AreaId} from '@/enums'
 
 export const canUseTeleport = (): boolean =>
   !isMorphed(me) &&
   !me.inTown &&
-  (me.getSkill(UnitSkill.teleport, 1) ||
-    me.getStat(UnitStat.item_nonclassskill, UnitSkill.teleport))
+  (me.getSkill(Skill.teleport, 1) ||
+    me.getStat(UnitStat.item_nonclassskill, Skill.teleport))
 
 const getPathReducer = (useTeleport: boolean): 0 | 1 => (useTeleport ? 1 : 0)
 

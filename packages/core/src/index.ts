@@ -1,5 +1,6 @@
 export * from './interfaces'
 export * from './enums'
 export * from './config'
+export * from './tables'
 export * as linkedList from './linked-list'
 export * as mouse from './mouse'
