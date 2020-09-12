@@ -124,7 +124,7 @@ declare class Area implements Point {
   exits: Exit[]
 }
 
-declare class Unit {
+declare class Unit implements Point {
   type: UnitTypeId
   gid: number
   name: string
@@ -134,11 +134,27 @@ declare class Unit {
   roomy: number
   x: number
   y: number
-  getState(state: number)
-  getSkill(skill: number)
-  getSkill(skill: number, unk: number)
-  getSkill(skill: number, unk: number, isCharged: boolean)
-  getStat(stat: number, unk: number)
+  getState(stateId: number): boolean
+  /**
+   * 0: Get right skill name
+   * 1: Get left skill name
+   * 2: Get right skill id
+   * 3: Get left skill id
+   * 4: Get an array with a [skillId, baseSkillLevel, totalSkillLevel] entry for every skill
+   */
+  getSkill(mode: 0 | 1 | 2 | 3 | 4): number | string | [number, number, number]
+  // If addItemSkillLevels == 0 then return base skill level.
+  // If addItemSkillLevels != 0 then return base skill level + skill levels gained by items(?).
+  getSkill(
+    skillId: number,
+    addItemSkillLevels?: number,
+    isCharged?: boolean
+  ): number
+  // statCompliment is used as an argument to the stat parameter.
+  // For example me.getStat(UnitStat.item_nonclassskill, Skill.teleport) will get the amount of nonclassskill teleport skills we have.
+  getStat(statId: number, statCompliment?: number): number
+  // hand is a truthy number. 0 = right, hand>0 = left.
+  setSkill(skillId: number, hand?: number, itemWithCharges?: Item): boolean
   inTown: boolean
   // targetArea is only used if the unit is a waypoint.
   interact: (targetArea?: number) => undefined
@@ -170,6 +186,8 @@ declare class Me extends Hero {
   gameReady: boolean
   profile: string
   ping: number
+  mp: number
+  hp: number
 }
 
 type UnitType = Hero | Npc | WorldObject | Item

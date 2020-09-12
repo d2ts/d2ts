@@ -1,3 +1,28 @@
+export enum GetSkillMode {
+  RightSkillName,
+  LeftSkillName,
+  RightSkillId,
+  LeftSkillId,
+  AllSkillDetails,
+}
+
+export enum SetSkill {
+  Right,
+  Left,
+}
+
+export enum CastType {
+  RightSkill,
+  LeftSkillShift,
+  LeftSkill,
+  RightSkillShift,
+}
+
+export enum SkillLevelCalculation {
+  Base,
+  WithBonusSkills
+}
+
 export enum Skill {
   attack = 0,
   kick = 1,

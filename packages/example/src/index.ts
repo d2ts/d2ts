@@ -5,6 +5,7 @@ import * as b from '@d2ts/behaviour'
 import {Blackboard} from '@d2ts/behaviour'
 import {Logger} from '@d2ts/logger'
 import {FluentBehaviourTreeBuilder} from '@d2ts/ts-fluent-bt'
+import {populateRestrictedSkills, restrictedSkillMap} from '@d2ts/skills'
 
 const builder = new FluentBehaviourTreeBuilder<Blackboard>()
 const logger = Logger.createLogger('D2ts')

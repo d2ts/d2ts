@@ -17,6 +17,7 @@
     "@d2ts/d2bot": "^0.0.1",
     "@d2ts/logger": "^0.0.1",
     "@d2ts/polyfill": "^0.0.1",
+    "@d2ts/skills": "^0.0.1",
     "@d2ts/ts-fluent-bt": "^1.12.0"
   },
   "devDependencies": {

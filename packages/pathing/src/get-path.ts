@@ -5,8 +5,8 @@ import {AreaId} from '@/enums'
 export const canUseTeleport = (): boolean =>
   !isMorphed(me) &&
   !me.inTown &&
-  (me.getSkill(Skill.teleport, 1) ||
-    me.getStat(UnitStat.item_nonclassskill, Skill.teleport))
+  (!!me.getSkill(Skill.teleport, 1) ||
+    !!me.getStat(UnitStat.item_nonclassskill, Skill.teleport))
 
 const getPathReducer = (useTeleport: boolean): 0 | 1 => (useTeleport ? 1 : 0)
 

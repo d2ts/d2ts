@@ -24,6 +24,21 @@ export enum HeroMode {
 }
 
 export class HeroModeProvider implements ModeProvider<Hero> {
+  isAttacking(unit: Hero): boolean {
+    return [
+      HeroMode.Attacking1,
+      HeroMode.Attacking2,
+      HeroMode.Casting,
+      HeroMode.Throwing,
+      HeroMode.Kicking,
+      HeroMode.Skill1,
+      HeroMode.Skill2,
+      HeroMode.Skill3,
+      HeroMode.Skill4,
+      HeroMode.Sequence,
+    ].includes(unit.mode)
+  }
+
   isCasting(unit: Hero): boolean {
     return unit.mode === HeroMode.Casting
   }
